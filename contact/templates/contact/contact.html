@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <form class="contact_form" action="{% url 'backend_contact'%}" method="POST">
+                {%csrf_token%}
+            <div class="form-group">
+            <label for="formGroupExampleInput">أسم الأول</label>
+            <input type="text" name="Fname" class="form-control" id="formGroupExampleInput" placeholder="مثال : ياسمين" >
+            </div>
+            <div class="form-group">
+            <label for="formGroupExampleInput3">أسم ألعائلة</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="مثال : علي" name="Lname">
+            </div>
+            <div class="form-group">
+            <label for="formGroupExampleInput2">ألبريد الألكتروني</label>
+            <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="مثال : example@gmail.com" name="Email">
+            </div>
+            <div class="form-group">
+            <label for="formGroupExampleInput4">ألرسالة</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="أكتب فكرتك ألناجحة" name="Massege">
+            </div>
+            <div class="submit form-group">
+                <input type="submit" value="إرسال">
+            </div>
+        </form>
+    </div>
+{% endblock content %}

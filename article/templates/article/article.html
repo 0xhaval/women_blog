@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+{% for art in article %}
+<div class="row">
+    <div class="col">
+        <div class="card container" style="width: 30rem;">
+            <img src="{{art.img.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{art.title}}</h5>
+              <p class="card-text">{{art.snippet}}</p>
+              <a href="{%url 'detail' art.slug%}" class="btn btn-primary">ألمزيد</a>
+            </div>
+          </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}

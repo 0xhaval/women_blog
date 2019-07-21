@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/master.css'%}">
+
+    <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet"> 
+    <title>إنجازاتي</title>
+</head>
+<body>
+  <!--Navbar-->
+  <header class="navo">
+    <nav class="container navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="{% url 'index' %}">إنجازاتي</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index'%}">ألرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'article'%}">الإنجازات</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about'%}">عن الموقع</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}" >ساعدينا</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  </header>
+{% block content%}
+{% endblock %}
+
+    <!-- Copyright -->
+    <div class="div-footer">
+      <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="https://codeforiraq.org/" target="_blank"> CodeforIRAQ.org</a>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+      <!-- JS files -->
+    <script src="{% static 'js/jquery-3.3.1.slim.min.js'%}"></script>
+    <script src="{% static 'js/popper.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'js/base.js'%}"></script>
+</body>
+</html>

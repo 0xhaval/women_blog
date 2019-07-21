@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="article_detile container">
+    <h1 class="display-4">{{article.title}}</h1>
+    <h6>تم ألنشر من قبل : {{article.article_auther}}</h6>
+    <p class="lead">{{article.body}}</p>
+    <blockquote>تم النشر في : {{article.date}}</blockquote>
+  </div>
+</div>
+{% endblock content %}
